@@ -3,8 +3,6 @@ var canvas = document.getElementsByTagName('div')[0];
 var palette = document.getElementsByTagName('div')[1];
 var paintColor = '';
 var colorArray = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'black', 'white'];
-var currentColor = document.createElement('div');
-var colorWheel = document.createElement('input');
 var isMouseDown = false;
 
 function mouseDown() {
@@ -40,8 +38,6 @@ function pickPaint(event) {
   currentColor.style.backgroundColor = event.target.style.backgroundColor;
 }
 
-canvas.addEventListener('click', changeColor);
-
 for(let i = 0; i< 3234; i++) {
   let element = document.createElement('div');
   element.className = 'pixel';
@@ -57,16 +53,10 @@ for(let j = 0; j < 7; j++) {
   palette.appendChild(dot);
 }
 
-colorWheel.className = 'paint';
-colorWheel.type = 'color';
-colorWheel.addEventListener("change", colorWheelPick);
-palette.appendChild(colorWheel);
-
-currentColor.className = 'paint';
-currentColor.style.backgroundColor = 'white';
-palette.appendChild(currentColor);
 paintColor = 'white';
 
+colorWheel.addEventListener("change", colorWheelPick);
+canvas.addEventListener('click', changeColor);
 canvas.addEventListener("mousedown", mouseDown);
 body.addEventListener("mouseup", mouseUp);
 canvas.addEventListener("mouseover", dragChangeColor);

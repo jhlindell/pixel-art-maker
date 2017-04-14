@@ -31,11 +31,98 @@
 
 .paint {
   margin-top: 2px;
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   float: left;
   border-style: 2px;
   border-style: solid;
   margin-left: 1px;
+}
+
+#colorBox {
+  width:90px;
+  height:90px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  float: right;
+  border-radius: 5px;
+}
+
+#currentColor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
+  margin: 5px auto;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+#currentText {
+  font-size: 14px;
+  text-align: center;
+  margin: auto;
+}
+
+#wheelBox {
+  width:90px;
+  height:90px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  float: right;
+  border-radius: 5px;
+}
+
+#wheelText {
+  font-size: 14px;
+  text-align: center;
+  margin: auto;
+}
+
+#colorWheel {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
+  margin: 5px auto;
+  box-sizing: border-box;
+  background-color: white;
+  display: block;
+}
+
+#menuBox {
+  width:90px;
+  height:90px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  float: right;
+  border-radius: 5px;
+  padding-top: 2px;
+}
+
+#new {
+  width:88px;
+  box-sizing: border-box;
+}
+
+#save {
+  width:88px;
+  box-sizing: border-box;
+}
+
+#load {
+  width:88px;
+  box-sizing: border-box;
+}
+
+#menu {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
 }
