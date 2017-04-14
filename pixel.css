@@ -1,3 +1,7 @@
+body {
+  background-color: darkgray;
+}
+
 #canvas {
   width: 794px;
   height: 588px;

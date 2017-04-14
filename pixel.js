@@ -21,7 +21,6 @@ function mouseUp() {
 function colorWheelPick() {
   paintColor = colorWheel.value;
   currentColor.style.backgroundColor = colorWheel.value;
-  console.log(colorWheel.value);
 }
 
 function changeColor(event){
@@ -83,17 +82,13 @@ function savePixels(){
     pixelArray.push(pixels[l].style.backgroundColor);
   }
   let fileName = prompt('Please Pick a File Name');
-  localStorage.setItem(fileName, pixelArray);
+  localStorage.setItem(fileName, JSON.stringify(pixelArray));
 }
 
 function loadPixels(){
   let userFile = prompt('Please enter the name of the file you want to load');
-  let loadArray = localStorage.getItem(userFile);
-  let pixelArray = loadArray.split('),');
-  for(n = 0; n < pixelArray.length-1; n++) {
-    pixelArray[n] += ')';
-  }
-  console.log(pixelArray);
+  let pixelArray = localStorage.getItem(userFile);
+  pixelArray = JSON.parse(pixelArray);
   clearPixels();
   generatePixels(pixelArray);
 }
